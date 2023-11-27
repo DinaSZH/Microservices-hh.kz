@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  hh_db:
+    container_name: hh_applies
+    ports:
+      - 5433:5433
+    environment:
+      - POSTGRES_PASSWORD=appliesroot
+      - POSTGRES_USER=appliesadmin
+    image: postgres:15.3-alpine
