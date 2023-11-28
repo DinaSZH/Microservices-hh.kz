@@ -31,6 +31,7 @@ if(process.env.NODE_ENV === 'production'){
     {
       host: dbConf.development.host,
       dialect: dbConf.development.dialect,
+      port: dbConf.development.port,
     }
   );
 }

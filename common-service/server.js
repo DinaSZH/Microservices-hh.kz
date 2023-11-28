@@ -13,12 +13,12 @@ app.use(express.static(__dirname + "/public"));
 
 app.use(passport.initialize());
 
-require('./api/passport')
+// require('./app/passport')
 
-app.use(require("./api/routes"));
-// app.use(require("./app/region/routes"));
-// app.use(require("./app/skills/routes"));
-// app.use(require("./app/employment-type/routes"));
+// app.use(require("./app/routes"));
+app.use(require("./app/region/routes"));
+app.use(require("./app/skills/routes"));
+app.use(require("./app/employment-type/routes"));
 // app.use(require("./app/languages/routes"));
 // app.use(require("./app/resume/routes"));
 // app.use(require("./app/specializations/routes"));

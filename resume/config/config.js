@@ -1,14 +1,15 @@
-// config.js
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
+const {DB_ADMIN, DB_PASSWORD} = require('../env-config')
 
 module.exports = {
   development: {
-    username: "authadmin",
-    password: "authroot",
-    database: "hh_auth",
+    username: DB_ADMIN,
+    password:DB_PASSWORD, // Password should be a string
+    database: "hh_resume",
     host: "127.0.0.1",
     dialect: "postgres",
+    port: 5433,
   },
   production: {
     username: "doadmin",
@@ -19,8 +20,8 @@ module.exports = {
     port: 25060,
     dialectOptions: {
       ssl: {
-        ca: fs.readFileSync(path.resolve("config", "ca-certificate.crt"))
-      }
-    }
+        ca: fs.readFileSync(path.resolve("config", "ca-certificate.crt")),
+      },
+    },
   },
 };
