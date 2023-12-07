@@ -13,7 +13,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.use(passport.initialize());
 
-// require('./app/auth/passport')
+require('./app/resume/passport')
 
 // app.use(require("./app/auth/routes"));
 // app.use(require("./app/region/routes"));

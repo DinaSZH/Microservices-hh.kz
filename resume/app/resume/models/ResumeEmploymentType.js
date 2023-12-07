@@ -19,7 +19,7 @@ const ResumeEmploymentType = sequelize.define("ResumeEmploymentType", {
 
 const getEmploymentTypeById = async (employmentTypeId) => {
   try {
-    const response = await axios.get(`http://localhost:3002/api/employment-types/${employmentTypeId}`);
+    const response = await axios.get(`http://localhost:3002/api/employment-types`);
     return response.data;
   } catch (error) {
     console.error('Error fetching EmploymentType data:', error);

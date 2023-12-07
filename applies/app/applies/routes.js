@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const { createApply, getEmployeeApplies, deleteApply, acceptEmployee, declineEmployee,getVacancyApplies } = require("./controllers");
-const {isEmployee, isManager} = require("../auth/middlewares");
+const {isEmployee, isManager} = require("../../middlewares/middlewares");
 const passport = require("passport");
 const {validateApply, isAuthorOfApply,isApplyExist} = require('./middlewares')
-const {isAuthorOfVacancy} = require('../vacancy/middlewares');
+const {isAuthorOfVacancy} = require('../../middlewares/middlewares');
 
 router.post("/api/applies", passport.authenticate('jwt', {session: false}) , isEmployee, validateApply, createApply);
 router.get("/api/applies/employee", passport.authenticate('jwt', {session: false}) , isEmployee, getEmployeeApplies);

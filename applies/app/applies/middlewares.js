@@ -1,5 +1,5 @@
 const Apply = require('./Apply');
-const Resume = require('../resume/models/Resume');
+const {  Resume }  = require('../../settings');
 
 const validateApply = (req, res, next) => {
     let errors = {};

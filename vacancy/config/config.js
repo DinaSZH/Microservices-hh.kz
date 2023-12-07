@@ -6,7 +6,7 @@ module.exports = {
   development: {
     username: DB_ADMIN,
     password:DB_PASSWORD, 
-    database: "hh_applies",
+    database: "hh_vacancy",
     host: "127.0.0.1",
     dialect: "postgres",
     port: 5433,

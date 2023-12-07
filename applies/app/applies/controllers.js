@@ -1,12 +1,12 @@
-const Apply = require('../models/Apply')
+const Apply = require('./Apply')
 const {NEW, INVITATION, DECLINED} = require('./utils')
-const sendEmail = require('./utils/sendMail');
-const sendEmail = require('./utils/sendMail');
-const Vacancy = require('../vacancy/models/Vacancy');
-const Resume = require('../resume/models/Resume');
-const User = require('../auth/User');
+const sendEmail = require('../../utils/sendMail');
+// const Vacancy = require('../vacancy/models/Vacancy');
+// const Resume = require('../resume/models/Resume');
+// const User = require('../auth/User');
 const { Op } = require('sequelize');
-const Company = require('../auth/Company');
+// const Company = require('../auth/Company');
+const { Vacancy, Resume, User, Company }  = require('../../settings');
 
 const createApply = async (req,res) =>{
 

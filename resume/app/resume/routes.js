@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const {createResume, getMyResumes, getResume, deleteResume, editResume, searchResume} = require("./controllers")
-const {isEmployee} = require("../auth/middlewares");
+const {isEmployee} = require("../../middlewares/middlewares");
 const {validateResume, isAuthorOfResume  } = require("./middlewares")
 const passport = require("passport");
 
